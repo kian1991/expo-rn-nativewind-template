@@ -1,20 +1,16 @@
+import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, Pressable, StyleSheet, Text, View } from 'react-native';
+import './src/global.css';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<View className='flex-1 justify-center items-center'>
+			<Text className='text-3xl tracking-tighter font-bold'>shadcn/ui</Text>
+			<StatusBar style='auto' />
+			<Pressable className='bg-black h-9 px-4 py-2 rounded-md mt-4'>
+				<Text className='text-white text-sm font-semibold tracking-tight'>BUTTON</Text>
+			</Pressable>
+		</View>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
